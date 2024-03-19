@@ -1,0 +1,8 @@
+<div class="dropdown">
+  <input autocomplete="off" type="text" class="form-control" id="comboInput" [value]="selectedItems.join(', ')" (click)="toggleDropdown()">
+  <div class="dropdown-menu" [ngClass]="{ 'show': dropdownOpen }">
+    <input autocomplete="off" type="text" class="form-control search-input" placeholder="Buscar..." [(ngModel)]="searchText" (input)="filterItems()">
+    <a class="dropdown-item"  (click)="toggleItemSelection(item)" *ngFor="let item of filteredItems"
+      [ngClass]="{ 'selected': isSelected(item) }">{{ item }}</a>
+  </div>
+</div>

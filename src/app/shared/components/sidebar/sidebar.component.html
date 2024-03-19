@@ -1,0 +1,25 @@
+<header class="bg-dark text-white py-4">
+  <div class="text-center">
+    <h1>Daniela Gift</h1>
+    <h5>¡Armalo a TU antojo!</h5>
+  </div>
+  <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">MENU</button>
+</header>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Productos a tu alcance</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h1>Opciones</h1>
+    <ul class="list-group">
+      <li routerLink="donas/order" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">
+        Crea tu dona
+      </li>
+      <li routerLink="home" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">
+        Crea tu Pankey
+      </li>
+    </ul>
+  </div>
+</div>

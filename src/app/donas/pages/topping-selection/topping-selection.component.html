@@ -1,0 +1,33 @@
+
+
+<div>
+  <div class="alert alert-success" role="alert" style="text-align: center;">
+    <h4 class="alert-heading">¡Puedes realizar 3 combinaciones!</h4>
+  </div>
+  <h1>Combinación {{ combinacionActual }}</h1>
+  <div>
+    <h2>Covertura</h2>
+    <app-dropdown [items]="coatings" (selectionChanged)="handleCoatingsSelectionChange($event)"></app-dropdown>
+    <h5>Covertura seleccionada:</h5>
+    <ul>
+      <li *ngFor="let coating of coatingsSelected">{{ coating }}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Salsas</h2>
+    <app-dropdown [items]="sauces" (selectionChanged)="handleSaucesSelectionChange($event)"></app-dropdown>
+    <h5>Salsas seleccionadas:</h5>
+    <ul>
+      <li *ngFor="let sauce of saucesSelected">{{ sauce }}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Toppings</h2>
+    <app-dropdown [items]="toppings" (selectionChanged)="handleToppingsSelectionChange($event)"></app-dropdown>
+    <h5>Toppings seleccionados:</h5>
+    <ul>
+      <li *ngFor="let topping of toppingsSelected">{{ topping }}</li>
+    </ul>
+  </div>
+  <button class="btn btn-primary btn-lg" (click)="guardarCombinacion()">Continuar</button>
+</div>
